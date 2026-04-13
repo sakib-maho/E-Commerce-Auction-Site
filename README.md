@@ -22,6 +22,25 @@ This project now includes authentication, listing creation, bidding, comments, w
 - Browse listings by categories
 - Basic admin panel for managing auction data
 
+## Quick Start
+
+```bash
+git clone https://github.com/sakib-maho/E-Commerce-Auction-Site.git
+cd E-Commerce-Auction-Site
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+```
+
+Open `http://127.0.0.1:8000/`.
+
+## License
+
+MIT License - see [LICENSE](LICENSE).
+
 ## Tech Stack
 
 - Python 3
@@ -39,21 +58,6 @@ This project now includes authentication, listing creation, bidding, comments, w
 └── auctions/              # App (models, views, routes, templates, static)
 ```
 
-## Quick Start
-
-```bash
-git clone https://github.com/sakib-maho/E-Commerce-Auction-Site.git
-cd E-Commerce-Auction-Site
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-```
-
-Open `http://127.0.0.1:8000/`.
-
 ## Main Routes
 
 - `/` - active listings
@@ -68,7 +72,3 @@ Open `http://127.0.0.1:8000/`.
 - This project uses SQLite for local development out of the box.
 - `db.sqlite3` is ignored by git.
 - For production deployment, set secure Django settings and a production database.
-
-## License
-
-MIT License - see [LICENSE](LICENSE).
