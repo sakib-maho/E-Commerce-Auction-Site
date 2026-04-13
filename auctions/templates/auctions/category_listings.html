@@ -1,0 +1,29 @@
+{% extends "auctions/layout.html" %}
+
+{% block title %}{{ category.name }} Listings{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h1 class="h4 mb-0">{{ category.name }} Listings</h1>
+    <a href="{% url 'categories' %}" class="btn btn-outline-secondary btn-sm">Back to Categories</a>
+</div>
+
+{% if listings %}
+    <div class="row g-3">
+        {% for listing in listings %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card listing-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ listing.title }}</h5>
+                        <p class="card-text text-muted">Seller: {{ listing.seller.username }}</p>
+                        <p class="fw-bold">$ {{ listing.current_price }}</p>
+                        <a href="{% url 'listing_detail' listing.id %}" class="btn btn-outline-primary btn-sm">View Listing</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="alert alert-info">No active listings in this category.</div>
+{% endif %}
+{% endblock %}
