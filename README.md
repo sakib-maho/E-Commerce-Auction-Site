@@ -1,5 +1,12 @@
 # E-Commerce Auction Site
 
+<!-- BrandCloud:readme-standard -->
+[![Maintained](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Showcase](https://img.shields.io/badge/Portfolio-Showcase-blue.svg)](#)
+
+_Part of the `sakib-maho` project showcase series with consistent documentation and quality standards._
+
 A complete Django web application for auction-style e-commerce listings.
 
 This project now includes authentication, listing creation, bidding, comments, watchlist management, and category browsing.
